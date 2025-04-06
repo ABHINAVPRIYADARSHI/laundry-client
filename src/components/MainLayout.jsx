@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Sidebar from "./Sidebar";
 import { auth } from "../firebase";
 import { Menu } from "lucide-react"; // Install lucide-react if not already
+import A2HSButton from "./A2HSButton";
 
 export default function MainLayout({ children }) {
   const [user, setUser] = useState(null);
@@ -29,6 +30,7 @@ export default function MainLayout({ children }) {
 
       {/* Page Content */}
       <div className="pt-16">{children}</div>
+      <A2HSButton />
     </div>
   );
 }
